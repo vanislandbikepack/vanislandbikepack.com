@@ -9,8 +9,6 @@ seo:
   author_twitter_handle:
   open_graph_type: article
   no_index: false
-categories:
-  - blog
 author: Joel Barrette
 thumbImg:
   image: /images/img-4978-2.png

@@ -12,39 +12,10 @@ content_blocks:
       _bookshop_name: home/hero
       title: Vancouver Island Bikepacking Collective
       description: ''
-      image_path: /images/dsc0131-dxo2.jpg
+      image_path: /images/dsc0131-dxo2.png
       link:
          text: Join the Discord
          url: https://discord.gg/7b9z4DHBPV
-   -
-      _bookshop_name: global/counter
-      title: Scale your
-      title_suffix: Business
-      description: >-
-         We have an extensive library of pre-written sales emails, proven
-         marketing templates, and more to get you started on your next project.
-      alternateStyle: false
-      numbers:
-         -
-            number: 200
-            suffix: m
-            prefix: $
-            text: Venture capital raised
-         -
-            number: 2016
-            text: Established in
-         -
-            number: 40
-            suffix: +
-            text: Amazing team members
-         -
-            number: 4322
-            suffix: +
-            text: Active users and growing
-   -
-      _bookshop_name: home/video
-      image_path: /images/video/video-thum.jpg
-      videoUrl: https://vimeo.com/45830194
    -
       _bookshop_name: global/header
       title: Vancouver Island Bikepacking

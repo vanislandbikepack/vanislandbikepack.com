@@ -13,10 +13,10 @@ categories:
   - blog
 author: Joel Barrette
 thumbImg:
-  image:
+  image: /images/img-4978.png
   image_alt:
 featuredImg:
-  image: /images/img-4978.jpg
+  image: ''
   image_alt:
 draft: false
 ---

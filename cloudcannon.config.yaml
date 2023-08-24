@@ -255,3 +255,7 @@ source_editor:
   theme: monokai
   show_gutter: true
 timezone: Etc/UTC
+_snippets_imports:
+  hugo:
+    include:
+      - hugo_embed

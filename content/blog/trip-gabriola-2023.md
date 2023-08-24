@@ -9,6 +9,8 @@ seo:
   author_twitter_handle:
   open_graph_type: article
   no_index: false
+categories:
+  - blog
 author: Joel Barrette
 thumbImg:
   image: /images/img-4978-2.png
@@ -20,7 +22,9 @@ draft: false
 ---
 {{< figure src="/images/img-4978.jpg" title="Showing off the Marin Swag" caption="Thanks Marin!" width="100%" >}}
 
-### The Planned Route
+###
+
+
 
 <iframe src="https://ridewithgps.com/embeds?type=route&amp;id=43785135&amp;metricUnits=true&amp;sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
 

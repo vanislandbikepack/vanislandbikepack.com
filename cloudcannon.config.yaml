@@ -256,6 +256,4 @@ source_editor:
   show_gutter: true
 timezone: Etc/UTC
 _snippets_imports:
-  hugo:
-    include:
-      - hugo_embed
+  hugo: true

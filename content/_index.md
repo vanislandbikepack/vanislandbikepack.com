@@ -12,7 +12,7 @@ content_blocks:
       _bookshop_name: home/hero
       title: Vancouver Island Bikepacking Collective
       description: ''
-      image_path: /images/dsc0131-dxo2.png
+      image_path: /images/dsc0131-dxo2-1.png
       link:
          text: Join the Discord
          url: https://discord.gg/7b9z4DHBPV

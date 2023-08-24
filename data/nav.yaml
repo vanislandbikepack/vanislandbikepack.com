@@ -4,14 +4,6 @@ items:
     text: Home
     enable_dropdown: false
     dropdown:
-  - link: /feature/
-    text: Feature
-    enable_dropdown: false
-    dropdown:
-  - link: /pricing/
-    text: Pricing
-    enable_dropdown: false
-    dropdown:
   - link: /about/
     text: About
     enable_dropdown: false

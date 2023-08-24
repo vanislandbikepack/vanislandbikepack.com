@@ -20,7 +20,9 @@ featuredImg:
   image_alt:
 draft: false
 ---
-![](/images/img-4978.jpg)![](/images/img-4975.jpg)
+{{< figure src="/images/img-4978.jpg" title="Showing off the Marin Swag" caption="Thanks Marin!" width="100%" >}}
+
+![](/images/img-4975.jpg)
 
 ![](/images/img-9160.jpg)
 

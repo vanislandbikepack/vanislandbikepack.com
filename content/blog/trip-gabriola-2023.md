@@ -22,21 +22,12 @@ draft: false
 ---
 {{< figure src="/images/img-4978.jpg" title="Showing off the Marin Swag" caption="Thanks Marin!" width="100%" >}}
 
-&nbsp;
-
-{{< figure src="/images/img-4975.jpg" title="Matthew Speaking to the Group" width="100%" >}}
-
+### The Planned Route
 
 <iframe src="https://ridewithgps.com/embeds?type=route&id=43785135&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
+
+{{< figure src="/images/img-4975.jpg" title="Matthew Speaking to the Group" width="100%" >}}
 
 {{< figure src="/images/img-9160.jpg" title="Exploring the Trails" height="100%" >}}
 
 {{< figure src="/images/img-4981.jpg" title="Making Tacos" >}}
-
-
-
-
-
-
-
-&nbsp;

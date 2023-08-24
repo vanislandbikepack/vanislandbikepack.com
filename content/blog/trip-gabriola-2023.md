@@ -21,3 +21,17 @@ featuredImg:
 draft: false
 ---
 {{< figure src="/images/img-4978.jpg" title="Showing off the Marin Swag" caption="Thanks Marin!" width="100%" >}}
+
+{{< figure src="/images/img-4975.jpg" title="Matthew Speaking to the Group" width="100%" >}}
+
+{{< figure src="/images/img-9160.jpg" title="Exploring the Trails" height="100%" >}}
+
+{{< figure src="/images/img-4981.jpg" title="Making Tacos" >}}
+
+
+
+
+
+
+
+&nbsp;

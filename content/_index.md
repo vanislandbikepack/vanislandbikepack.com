@@ -10,7 +10,7 @@ seo:
 content_blocks:
    -
       _bookshop_name: home/hero
-      title: Beautiful email campaigns
+      title: Vancouver Island Bikepacking Collective
       description: ''
       image_path: /images/hero/hero-image-2.png
       link:

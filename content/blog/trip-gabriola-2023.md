@@ -13,16 +13,16 @@ categories:
   - blog
 author: Joel Barrette
 thumbImg:
-  image: /images/img-4978.png
+  image: /images/img-4978-2.png
   image_alt:
 featuredImg:
-  image: ''
+  image: /images/img-4975.jpg
   image_alt:
 draft: false
 ---
 {{< figure src="/images/img-4978.jpg" title="Showing off the Marin Swag" caption="Thanks Marin!" width="100%" >}}
 
-![](/images/img-4975.jpg)
+
 
 ![](/images/img-9160.jpg)
 

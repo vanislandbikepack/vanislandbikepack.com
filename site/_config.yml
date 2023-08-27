@@ -1,16 +1,22 @@
-title: Vonge
+# Timezone
+timezone: Pacific/Auckland # Set the time zone for site generation.
+
+# Pagination Settings
+pagination:
+  per_page: 6 # maximum number of items per page
+  limit: false # Maximum number of pages to paginate (false for unlimited)
+  permalink: /page:num/ # pagination path (relative to template page)
+  title_suffix: " - page :num" # Append to template's page title
 
 plugins:
   - jekyll-bookshop
-  - cloudcannon-jekyll-bookshop
-  - jekyll-sitemap
-  - jekyll/tagging
-  - jekyll-pagebreak
+  - jekyll-postcss-v2
+  - jekyll-local-assign
 
 # Multiple bookshops can be used on one website,
 # or different production / staging locations.
 bookshop_locations:
-  - ../components
+  - ../component-library
 
 exclude:
   - postcss.config.js
@@ -19,75 +25,57 @@ exclude:
 include:
   - _cloudcannon
 
-# The rest of this array structure will be
-# populated by the bookshop-array-structures plugin.
-_array_structures:
-  content_blocks:
-    style: modal
-
-collections_dir: 'collections'
-
-collections:
-  pages:
-    output: true
-    permalink: /:title/
-  projects:
-    output: true
-    permalink: /project/:slug
-  testimonials:
-    output: false
-  posts:
-    output: true
-    permalink: /blog/:slug
-
-cloudcannon:
-  collections:
-    pages:
-      _icon: 'wysiwyg'
-    projects:
-      _icon: 'work_outline'
-      _subtext_key: subtitle
-    testimonials:
-      _icon: 'format_quote'
-      _subtext_key: position
-      _enabled_editors:
-        - data
-
-_collection_groups:
-  - heading: Content
-    collections:
-      - pages
-      - projects
-      - testimonials
-  - heading: Blogging
-    collections:
-      - posts
-      - drafts
-  - heading: Settings
-    collections:
-      - data
-
 defaults:
   - scope:
       path: ""
     values:
       layout: default
   - scope:
-      type: pages
-      path: _pages/index.html
-    values:
-      permalink: /
-  - scope:
-      type: projects
-    values:
-      layout: project
-  - scope:
       type: posts
+      path: _posts
     values:
       layout: post
+  - scope:
+      type: portfolio
+      path: _portfolio
+    values:
+      layout: portfolio
+  - scope:
+      type: staff_members
+      path: _team
+    values:
+      layout: team-member
 
+collections:
+  staff_members:
+    output: true
+  posts:
+    output: true
+  portfolio:
+    output: true
+  portfolio-pages:
+    output: true
+  
+# portfolio tags
+portfolio-tags:
+  - portfolio_name: "Web Development"
+    portfolio-tag: "web-development"
+  - portfolio_name: "Mobile Development"
+    portfolio-tag: "mobile-development"
+  - portfolio_name: "Digital product design"
+    portfolio-tag: "digital-product-design"
+  - portfolio_name: "Cloud &amp; DevOps"
+    portfolio-tag: "cloud-and-devops"
 
-# Tags
-tag_page_dir: tag
-tag_page_layout: tag_page
-tag_permalink_style: /:title
+# Build Settings
+markdown: kramdown
+
+kramdown:
+  coderay_default_lang: html
+
+# SASS Settings
+sass:
+  style: compressed
+
+gems:
+  - octopress-paginate

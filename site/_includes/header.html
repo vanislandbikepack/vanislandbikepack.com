@@ -1,60 +1,136 @@
-<!-- begin header -->
-<header class="c-header">
-  <div class="container">
-    <div class="row">
-      <div class="c-header__inner">
+{% assign navigation = site.data.navigation %}
+{% assign c = "c-header" %}
+ 
+<div class="{{c}} 
+			fixed-top">
+	<div class="navbar 
+				{{c}}__navbar 
+				navbar-expand-lg 
+				mainmenu">
+		<div class="container">
+			{% if site.data.general.logo_image and site.data.general.logo_image != "" %}
+				<a class="navbar-brand 
+						  {{c}}__navbar-brand" 
+				   href="/">
+				   <img src="{{ site.data.general.logo_image }}" 
+				   		alt="logo" 
+				   		class="img-fluid">
+				</a>
+			{% endif %}
 
-        <div class="logo">
-          <a class="logo__link" href="{{ site.baseurl }}/">
-          {%if site.data.navigation.logo_image %}
-            <img class="logo__image" src="{{ site.baseurl }}{{ site.data.navigation.logo_image }}" alt="{{ site.data.general_settings.title }}">
-          {% else %}
-            {{ site.data.settings.title }}
-          {% endif %}
-          </a>
-        </div>
+			{% if navigation.show_login_options %}
+				<div class="{{c}}__header-widget 
+							order-lg-2 
+							d-none 
+							d-md-block">
+					{% if navigation.login_url and navigation.login_url != "" %}
+						<a class="btn 
+								  btn-link 
+								  {{c}}__login" 
+						   href="{{ navigation.login_url }}">Login</a>
+					{% endif %}
+					{% if navigation.signup_url and navigation.signup_url != "" %}
+						<a class="btn 
+								  {{c}}__sign-up" 
+						   href="{{ navigation.signup_url }}">Sign up</a>
+					{% endif %}
+				</div>
+			{% endif %}
 
-        <nav class="main-nav">
-          <div class="main-nav__box">
+			<!-- navbar toggler icon -->
+			<button onclick="navbartoggle(this)" 
+					class="{{c}}__mobile-nav-button 
+						  navbar-toggler" 
+					type="button" 
+					data-toggle="collapse" 
+					data-target="#navbarNavDropdown" 
+					aria-controls="navbarNavDropdown" 
+					aria-expanded="false" 
+					aria-label="Toggle navigation">
+				<span>
+					<div class="{{c}}__toggle-bar1"></div>
+					<div class="{{c}}__toggle-bar2"></div>
+					<div class="{{c}}__toggle-bar3"></div>
+				</span>
+			</button>
 
-            <div class="nav__icon-close">
-              <i class="ion ion-md-close"></i>
-            </div>
+			<!-- Main navigation -->
+			<nav class="collapse 
+						navbar-collapse 
+						justify-content-center" 
+				 id="navbarNavDropdown">
+				<ul class="navbar-nav 
+						   {{c}}__navbar-nav">
+					{% for level1 in navigation.menu %}
+						{% if level1.option %}
+							<li class="dropdown">
+								<a class="nav-link 
+										  {{c}}__nav-link 
+										  dropdown-toggle 
+										  {% if page.path == "index.html" and level1.url == "/" %}active{% endif %} 
+										  {% if level1.url == page.permalink %}active{% endif %}" 
+								   data-toggle="dropdown" 
+								   href="{{ site.data.general.site_info.url }}{{ level1.url }}">{{ level1.title }}</a>
+								<ul class="dropdown-menu">
+									{% for level2 in level1.option %}
+										{% if level2.option %}
+											<!-- 1st level dropdown menu  -->
+											<li class="dropdown">
+												<a class="dropdown-toggle"
+												   href="{{ site.data.general.site_info.url }}{{ level2.url }}" 
+												   data-toggle="dropdown">{{ level2.title }}</a>
+												<ul class="dropdown-menu">
+													{% for level3 in level2.option %}
+														<!-- 2nd level drop-down menu -->
+														<li>
+															<a href="{{ site.data.general.site_info.url }}{{ level3.url }}">{{ level3.title }}</a>
+														</li>
+													{% endfor %}
+												</ul>
+											</li>
+										{% else %}
+											<li>
+												<a href="{{ site.data.general.site_info.url }}{{ level2.url }}">{{ level2.title }}</a>
+											</li>
+										{% endif %}
+									{% endfor %}
+								</ul>
+							</li>
+						{% else %}
+							<li>
+								<a class="nav-link 
+										  {{c}}__nav-link 
+										  {% if page.path == "index.html" and level1.url == "/" %}active{% endif %} 
+										  {% if level1.url == page.permalink %}active{% endif %}" 
+								   href="{{ site.data.general.site_info.url }}{{ level1.url }}">{{ level1.title }}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+				{% if navigation.show_login_options %}
+					<div class="ml-3 
+								d-md-none 
+								d-lg-none">
+						{% if navigation.login_url and navigation.login_url != "" %}
+							<!-- login link -->
+							<a class="btn 
+									  {{c}}__header-login" 
+							   href="{{ navigation.login_url }}">Login</a>
+						{% endif %}
+						<br>
+						{% if navigation.signup_url and navigation.signup_url != "" %}
+							<!-- signup link -->
+							<a class="btn 
+									  header-sign-up 
+									  {{c}}__secondary-signup" 
+							   href="{{ navigation.signup_url }}">Sign up</a>
+						{% endif %}
+					</div>
+				{% endif %}
+			</nav>
+		</div>
+	</div>
+</div>
 
-            <div class="nav__title">Menu</div>
-
-              <ul class="nav__list list-reset">
-
-              {% for item in site.data.navigation.menu__settings.menu__items %}
-                {% if item.submenu %}
-                <li class="nav__item dropdown">
-                  <span class="nav__link dropdown-toggle">{{ item.title }} <i class="ion ion-ios-arrow-down arrow-down"></i></span>
-                  <div class="dropdown-menu">
-                    {% for submenu-item in item.submenu %}
-                      <a href="{{ submenu-item.url }}" class="nav__link{% if page.url == submenu-item.url %} active-link{% endif %}">{{submenu-item.title}}</a>
-                    {% endfor %}
-                  </div>
-                </li>
-
-                {% else %}
-                <li class="nav__item">
-                  <a href="{{ item.url | relative_url }}" class="nav__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
-                </li>
-                {% endif %}
-              {% endfor %}
-
-            </ul>
-          </div>
-
-          {% bookshop_include social-link %}
-        </nav>
-
-        <div class="nav-button">
-          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</header>
-<!-- end header -->
+<div class="{{c}}__header-height"></div>
+<!-- header section ends -->

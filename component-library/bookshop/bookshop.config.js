@@ -1,5 +1,6 @@
+// Bookshop configuration
 module.exports = {
-  engines: {
-      "@bookshop/hugo-engine": {}
-  }
+    engines: {
+        "@bookshop/jekyll-engine": {}
+    }
 }

@@ -1,76 +1,48 @@
-# Dante
+# Sendit
 
-Dante serves as an example of a fully-functioning implementation of [Bookshop 2.0](https://github.com/CloudCannon/bookshop) on a simple website.
+Sendit is a polished, marketing website template for Hugo. Browse through a [live demo](https://jovial-pipe.cloudvent.net/). 
 
-![Dante template screenshot](site/images/_screenshot.png)
+![Sendit template screenshot](static/images/_screenshot.png)
 
-Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Community](https://cloudcannon.com/community/).
 
-[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/dante-jekyll-bookshop-template)
+[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/sendit-hugo-template)
 
 ## Features
 
-* Live editing with [CloudCannon](http://cloudcannon.com/)
-* Component library for website building
-* Fully configurable Website
 * Pre-built pages
 * Pre-styled components
-* Blog
-* Portfolio
-* Staff and author system
-* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
-* Search engine optimisation
+* Blog with pagination and category pages
+* Configurable navigation and footer
+* Multiple hero options 
+* Optimised for editing in [CloudCannon](https://cloudcannon.com/)
 
 ## Setup
 
-Dante was built with [Jekyll](http://jekyllrb.com/) version 4.2.0, but should support newer versions as well.
+Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Hugo locally).
 
-Install the dependencies for Bookshop:
+## Develop
 
-~~~bash
-$ npm install
-~~~
+Sendit was built with [Hugo](https://gohugo.io/) version `0.96.0`, but should support newer versions as well.
+### Prerequisites
+* Hugo [install](https://gohugo.io/getting-started/installing/). `brew install hugo`
+* Go [install](https://go.dev/learn/). `brew install go`
 
-Install the Jekyll dependencies with [Bundler](http://bundler.io/):
-
-~~~bash
-$ cd site
-$ bundle install
-~~~
-
-Run the website:
-
-~~~bash
-$ cd ../
-$ npm start
-~~~
+### Quickstart
+1. In the terminal at the root dir, run: `npm i`
+2. Start site and bookshop: `npm run dev` OR site alone: `npm run start`
+* By default bookshop live browser will be at : [http://localhost:30775/](http://localhost:30775/)
+* By default the site will be at : [http://localhost:1313/](http://localhost:1313/)
 
 ## Editing
 
-Dante is already optimised for adding, updating and removing pages, and components within CloudCannon.
+Sendit is set up for adding, updating and removing pages, components, posts, portfolio items, company details and footer elements in [CloudCannon](https://app.cloudcannon.com/).
 
-### Posts
-
-* Add, update or remove a post in the *Posts* collection.
-* The **Author Staff Member** field links to members in the **Staff Members** collection.
-* Change the defaults when new posts are created in `_posts/_defaults.md`.
-
-### Contact Forms
-
-* The contact form isn't connected to any backend allowing you connect to your provider of choice. As this template is configured for CloudCannon we would reccomend using CloudCannon as your contact form provider. Documentation can be found here: https://cloudcannon.com/documentation/articles/creating-a-form-for-your-site-on-cloudcannon/ 
-
-### Staff Members
+### Company details
 
 * Reused around the site to save multiple editing locations.
+* Set in the *Data* / *Company* section.
 
-### Navigation
+### Nav/footer details
 
-* Managed as a data file to give clients better access.
-* Set in the *Data > Navigation* section.
-
-### Footer
-
-* Managed as a data file to give clients better access.
-* Set in the *Data > Footer* section.
-
-
+* Reused around the site to save multiple editing locations.
+* Set in the *Data* section with respective names

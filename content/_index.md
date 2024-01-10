@@ -16,7 +16,8 @@ content_blocks:
       image_path: /images/dsc0131-dxo2-1.png
       link:
          text: Join the mailing list
-         url: /#
+         url: >-
+            https://docs.google.com/forms/d/1Z10qn4AI0YKwO_sBbRQofCbH4yQ9K61Hbd4k-YXnCmA/viewform?edit_requested=true
    -
       _bookshop_name: global/header
       title: 'Sendit '

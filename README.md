@@ -1,48 +1,49 @@
-# Sendit
+# Vonge
 
-Sendit is a polished, marketing website template for Hugo. Browse through a [live demo](https://jovial-pipe.cloudvent.net/). 
+Vonge is a Personal portfolio/blog site template for Jekyll. Browse through a [live demo](https://jazzed-kale.cloudvent.net/).
+Increase the web presence of your brand with this configurable theme.
 
-![Sendit template screenshot](static/images/_screenshot.png)
+![Vonge template screenshot](_screenshot.png)
 
+Vonge was made by [CloudCannon](http://cloudcannon.com/), the JAMStack Cloud CMS.
+The component library is built and maintained for use with [Bookshop](https://github.com/cloudcannon/bookshop/)
 
-[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/sendit-hugo-template)
+Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Community](https://cloudcannon.com/community/).
+
+[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/vonge-jekyll-bookshop-template)
 
 ## Features
 
+* Component library for website building
+* Fully configurable Website
 * Pre-built pages
 * Pre-styled components
-* Blog with pagination and category pages
-* Configurable navigation and footer
-* Multiple hero options 
-* Optimised for editing in [CloudCannon](https://cloudcannon.com/)
-
-## Setup
-
-Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Hugo locally).
+* Blog
+* Category pages
+* Testimonials
+* Portfolio
+* Live editing with [CloudCannon](http://cloudcannon.com/)
+* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
+* Search engine optimisation
 
 ## Develop
 
-Sendit was built with [Hugo](https://gohugo.io/) version `0.96.0`, but should support newer versions as well.
-### Prerequisites
-* Hugo [install](https://gohugo.io/getting-started/installing/). `brew install hugo`
-* Go [install](https://go.dev/learn/). `brew install go`
+Vonge was built with [Jekyll](http://jekyllrb.com/) version 4.2.0, but should support newer versions as well.
 
-### Quickstart
-1. In the terminal at the root dir, run: `npm i`
-2. Start site and bookshop: `npm run dev` OR site alone: `npm run start`
-* By default bookshop live browser will be at : [http://localhost:30775/](http://localhost:30775/)
-* By default the site will be at : [http://localhost:1313/](http://localhost:1313/)
+Install the dependencies for Bookshop:
 
-## Editing
+~~~bash
+$ npm install
+~~~
 
-Sendit is set up for adding, updating and removing pages, components, posts, portfolio items, company details and footer elements in [CloudCannon](https://app.cloudcannon.com/).
+Install the Jekyll dependencies with [Bundler](http://bundler.io/):
 
-### Company details
+~~~bash
+$ npm run install-jekyll
+~~~
 
-* Reused around the site to save multiple editing locations.
-* Set in the *Data* / *Company* section.
+Run the website:
 
-### Nav/footer details
-
-* Reused around the site to save multiple editing locations.
-* Set in the *Data* section with respective names
+~~~bash
+$ npm start
+~~~

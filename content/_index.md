@@ -19,37 +19,6 @@ content_blocks:
          url: >-
             https://docs.google.com/forms/d/1Z10qn4AI0YKwO_sBbRQofCbH4yQ9K61Hbd4k-YXnCmA/viewform?edit_requested=true
    -
-      _bookshop_name: global/header
-      title: 'Sendit '
-      title_suffix: Features
-      description: >-
-         Our platform offers the most advanced features including automated
-         email content creation, dynamic personalization, and customer
-         segmentation.
-      no_top_pad: true
-   -
-      _bookshop_name: global/feature
-      image_path: /images/feature/feature-card-one.png
-      title: Email Campaign in one minute
-      description: >-
-         Send an email campaign with one click, in just minutes. Automate your
-         emails and content, while keeping the human touch.
-      btn:
-         link: /#
-         text: Try This Free
-      reversed: false
-   -
-      _bookshop_name: global/feature
-      image_path: /images/feature/feature-card-two.png
-      title: See every Lead in one Place
-      description: >-
-         Sales analytics and automation made simple: see every sales lead in one
-         place, regardless of where it came from.
-      btn:
-         link: /#
-         text: Try This Free
-      reversed: true
-   -
       _bookshop_name: global/feature
       image_path: /images/feature/feature-card-three.png
       title: 100% free uploads
